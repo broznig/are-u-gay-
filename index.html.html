@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>simple question</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #marriage-question {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        #answer-input {
+            padding: 10px;
+            width: 300px;
+            margin-bottom: 20px;
+        }
+        #submit-button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        #submit-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div id="marriage-question">ARE U GAY?</div>
+    <form id="marriage-form">
+        <input type="text" id="answer-input" placeholder="Type your answer here..." required>
+        <br>
+        <button type="submit" id="submit-button">Submit</button>
+    </form>
+
+    <script>
+        // Function to handle form submission
+        document.getElementById('marriage-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+            
+            // Get the value entered by the user
+            var answer = document.getElementById('answer-input').value.trim().toLowerCase();
+            
+            // Check the answer
+            if (answer === "yes") {
+                alert("Congratulations! u are a failure");
+            } else if (answer === "no") {
+                alert("i know ur gay,dont lie to me (: ");
+            } else {
+                alert("Please enter 'yes' or 'no' as your answer.");
+            }
+        });
+    </script>
+</body>
+</html>
